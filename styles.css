@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+    --gren-gray-scale-900: #002603;
+    --gren-gray-scale-800: #173b1a;
+    --gren-gray-scale-700: #2b572e;
+    --gren-gray-scale-600: #406b42;
+    --gren-gray-scale-500: #618062;
+    --gren-gray-scale-400: #7a997c;
+    --gren-gray-scale-300: #96b297;
+    --gren-gray-scale-200: #b4ccb4;
+    --gren-gray-scale-100: #dae5da;
+    --gren-gray-scale-50: #edf2ee;
+    --gray-scale-gray-–-900: #1a1a1a;
+    --gray-scale-gray-–-800: #333;
+    --gray-scale-gray-–-700: #4d4d4d;
+    --gray-scale-gray-–-600: #666;
+    --gray-scale-gray-–-500: #808080;
+    --gray-scale-gray-–-400: #999;
+    --gray-scale-gray-–-300: #b3b3b3;
+    --gray-scale-gray-–-200: #ccc;
+    --gray-scale-gray-–-100: #e6e6e6;
+    --gray-scale-gray-–-50: #f2f2f2;
+    --gray-scale-white: #fff;
+    --branding-success-bright: #84d187;
+    --branding-success: #00b207;
+    --branding-success-dark: #2c742f;
+    --branding-warning: #ff8a00;
+    --branding-error: #ea4b48;
+    --font-family: "Poppins", sans-serif;
+    --second-family: "Segoe Script", sans-serif;
+    --third-family: "Dancing Script", sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+iconify-icon {
+    vertical-align: middle;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+p,
+span,
+address {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family);
+}
+
+ul,
+ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.productCard {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.productCard .productCnt {
+    padding: 16px;
+}
+
+.productCard h4 a {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--gray-scale-gray-–-700);
+}
+
+.productCard p {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--gray-scale-gray-–-900);
+}
+
+.productCard p del {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-decoration: line-through;
+    color: var(--gray-scale-gray-–-400);
+}
+
+.productCard .rating {
+    display: flex;
+    color: var(--branding-warning);
+}
+
+.productCard .rating .empty {
+    color: var(--gray-scale-gray-–-200);
+}
+
+
+.productCard .productImage {
+    position: relative;
+}
+
+.productCard .productImage .discount {
+    position: absolute;
+    top: 16px;
+    left: 16px;
+    background-color: var(--branding-error);
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    border-radius: 4px;
+    padding: 3px 8px;
+    color: var(--gray-scale-white);
+}
+
+.productCard .productImage .quickMenu {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+}
+
+.productCard .productImage .quickMenu li {
+    transform: translateX(-50px);
+    transition: 0.4s ease;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.productCard .productImage .quickMenu li:nth-child(2) {
+    transition-delay: 0.1s;
+}
+
+.productCard:hover .productImage .quickMenu li {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(0);
+}
+
+
+.productCard .productImage .quickMenu a {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+    display: block;
+    text-align: center;
+    line-height: 40px;
+    margin-bottom: 6px;
+    color: #000;
+    background-color: #fff;
+}
+
+/* -------------------------------------------------------------------------- */
+/*                             Header Starts here                             */
+header #topHeader {
+    background-color: #EDF2EE;
+    padding: 12px 0;
+}
+
+header #topHeader address {
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    color: var(--gren-gray-scale-700);
+}
+
+header #topHeader form select {
+    border: none;
+    background-color: transparent;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 130%;
+    text-align: center;
+    color: var(--gren-gray-scale-700);
+}
+
+
+header #mainHeader #primaryMenu ul {
+    gap: 27px;
+}
+
+header #mainHeader {
+    padding: 20px 0;
+}
+
+header #mainHeader #primaryMenu ul a {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+    color: var(--gray-scale-gray-–-500);
+}
+
+header #mainHeader #primaryMenu ul a.active,
+header #mainHeader #primaryMenu ul a:hover {
+    color: var(--gray-scale-gray-–-900);
+}
+
+
+header .quickLinks .ctaBtn {
+    margin-right: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 150%;
+}
+
+header .quickLinks li a {
+    color: var(--gray-scale-gray-–-900);
+}
+
+header .quickLinks li {
+    margin-right: 20px;
+}
+
+header .quickLinks li:last-child {
+    margin-right: 0;
+}
+
+header .quickLinks li .cart {
+    position: relative;
+}
+
+header .quickLinks li .cart .cartCount {
+    position: absolute;
+    border: 1px solid var(--gray-scale-white);
+    border-radius: 16px;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+    background: var(--branding-success-dark);
+    font-weight: 500;
+    font-size: 10px;
+    text-align: center;
+    color: var(--gray-scale-white);
+    top: -2px;
+    right: -3px;
+}
+
+header #mblHeader {
+    padding: 15px 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+header #mblHeader button {
+    border: none;
+    background-color: transparent;
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+.productThumbSlider img{
+    opacity: 0.5;
+    border: 1px solid transparent;
+    transition: 0.3s;
+}
+
+.productThumbSlider .slick-current img{
+    opacity: 1;
+    border-color: var(--branding-success);
+}
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                             Footer Starts here                             */
+footer #mblFooter {
+    position: fixed;
+    bottom: 0px;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 99;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+footer #mblFooter ul {
+    display: flex;
+    padding: 15px 10px;
+    justify-content: space-around;
+
+}
+
+footer #mblFooter ul a {
+    color: var(--gray-scale-gray-–-900);
+}
+
+/* -------------------------------------------------------------------------- */
+
+
+
+/* -------------------------------------------------------------------------- */
+/*                              Featured product                              */
+#featuredProduct {
+    padding: 80px 0;
+}
+
+/* -------------------------------------------------------------------------- */
